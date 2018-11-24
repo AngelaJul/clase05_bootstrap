@@ -16,6 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from backoffice.views import *
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', index, name='index'),
+    path('listar', listar, name='listar'),
+    path('agregar', agregar, name='agregar'),
+
+
 ]
